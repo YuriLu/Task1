@@ -6,18 +6,23 @@ using System.Threading.Tasks;
 
 namespace Task1
 {
+    public enum TypeCandy { Lollipop, ChocolateCandy };
+
     public class Candy : Sweet
     {
-        private string color { get; set; }
-        public Candy(string candyName, int candyWeight, int candySugar, int candyCalories, string candyColor)
+        public string Color { get; private set; }
+        public TypeCandy Type; 
+        
+
+        public Candy(string candyName, int candyWeight, int candySugar, int candyCalories, TypeCandy type)
             : base(candyName, candyWeight, candySugar, candyCalories)
         {
-            this.color = candyColor;
+            this.Type = type;
         }
 
-        public override void StructureCandy()
-        {
-            Console.WriteLine("Состав конфеты: {0}, {1}, {2}, {3}, {4}");
-        }
+        //public override void StructureCandy()
+        //{
+        //    Console.WriteLine("Состав конфеты: {0}, {1}, {2}, {3}, {4}", Name, Weight, Sugar, Calories, color);
+        //}
     }
 }

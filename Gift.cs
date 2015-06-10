@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Task1
 {
-    public class Gift
+    public class Gift : IGift
     {
         private List<Sweet> gift;
 
@@ -20,19 +20,29 @@ namespace Task1
             gift.Add(sw);
         }
 
-        public void RemoveCandy(Sweet sw)
+        public int GiftWeight()
         {
-            gift.Remove(sw);
+            int giftWeight = 0;
+            foreach (var i in gift)
+            {
+                giftWeight += i.Weight;
+            }
+            return giftWeight;
         }
 
-        public int GiftWeight(Sweet sw)
+        public void Sort()
         {
-            int weight = 0;
-            foreach (var i in sw)
-            {
-                weight += sw;
-            }
-            return 0;
+            gift = gift.OrderBy(x => x.Weight).ToList();
         }
+
+        public void ShowItems()
+        {
+            Console.WriteLine("Набор конфет: ");
+            foreach(var i in gift)
+            {
+                Console.WriteLine(i.Name + " " + "Вес конфеты: " + i.Weight + " " + "Сахар:" + i.Sugar + " " + "Калории: " + i.Calories);
+            }
+        }
+
     }
 }

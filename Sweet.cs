@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace Task1
 {
-    public abstract class Sweet : IEnumerator
+    public abstract class Sweet 
     {
-        private string Name { get; set; }
-        private int Weight { get; protected set; }
-        private int Sugar { get; protected set; }
-        private int Calories { get; protected set; }
+        public string Name { get; private set; }
+        public int Weight { get; private set; }
+        public int Sugar { get; private set; }
+        public int Calories { get; private set; }
 
         public Sweet(string sName, int sWeight, int sSugar, int sCalories)
         {
@@ -22,10 +22,7 @@ namespace Task1
             this.Calories = sCalories;
         }
 
-        public IEnumerator GetEnumerator()
-        {
-            return this;
-        }
+
 
     }
 }

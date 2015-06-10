@@ -44,6 +44,7 @@
     <Compile Include="Candy.cs" />
     <Compile Include="Chocolate.cs" />
     <Compile Include="Gift.cs" />
+    <Compile Include="IGift.cs" />
     <Compile Include="Sweet.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

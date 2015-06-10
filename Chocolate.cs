@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace Task1
 {
+    public enum ChocolateColor { BlackChocolate, WhiteChocolate };
     public class Chocolate : Sweet
     {
-        private string color { get; set; }
-        public Chocolate(string chocoName, int chocoWeight, int chocoSugar, int chocoCalories, string chocoColor) 
+        public ChocolateColor color;
+        public Chocolate(string chocoName, int chocoWeight, int chocoSugar, int chocoCalories, ChocolateColor chocoColor) 
             : base(chocoName, chocoWeight, chocoSugar, chocoCalories)
         {
             this.color = chocoColor;
