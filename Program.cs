@@ -10,8 +10,8 @@ namespace Task1
     {
         static void Main(string[] args)
         {
-            Sweet lollipop = new Candy("ChupaChups", 25, 25, 70, TypeCandy.Lollipop);
-            Sweet candy = new Candy("M&M", 75, 25, 70, TypeCandy.ChocolateCandy);
+            Sweet lollipop = new Candy("ChupaChups", 25, 75, 70, TypeCandy.Lollipop);
+            Sweet candy = new Candy("M&M", 75, 45, 70, TypeCandy.ChocolateCandy);
             Sweet choco = new Chocolate("Alpen Gold", 100, 115, 250, ChocolateColor.WhiteChocolate);
             IGift gift = new Gift();
 
@@ -20,7 +20,9 @@ namespace Task1
             gift.AddCandy(choco);
             gift.Sort();
             gift.ShowItems();
+            gift.FindCandyBySugar(20, 74);
 
+            Console.WriteLine();
             Console.WriteLine("Вес подарка: {0}", gift.GiftWeight());
             Console.ReadKey();
 

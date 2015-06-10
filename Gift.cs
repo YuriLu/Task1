@@ -15,9 +15,9 @@ namespace Task1
             gift = new List<Sweet>();
         }
 
-        public void AddCandy(Sweet sw)
+        public void AddCandy(Sweet sweets)
         {
-            gift.Add(sw);
+            gift.Add(sweets);
         }
 
         public int GiftWeight()
@@ -44,5 +44,22 @@ namespace Task1
             }
         }
 
+        public void FindCandyBySugar(int min, int max)
+        {
+            List<Sweet> resultSweet = new List<Sweet>();
+            Console.WriteLine();
+            Console.WriteLine("Избранная(-ые) конфета(-ы): ");
+            foreach(var i in gift)
+            {
+                if (i.Sugar >= min && i.Sugar <= max) 
+                {
+                    resultSweet.Add(i);
+                    Console.WriteLine(i.Name + " " + "Вес конфеты: " + i.Weight + " " + "Сахар:" + i.Sugar + " " + "Калории: " + i.Calories);
+                }
+                
+            }
+            
+
+        }
     }
 }

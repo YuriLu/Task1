@@ -12,5 +12,6 @@ namespace Task1
         int GiftWeight();
         void Sort();
         void ShowItems();
+        void FindCandyBySugar(int min, int max);
     }
 }
