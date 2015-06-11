@@ -11,8 +11,6 @@ namespace Task1
     {
         static void Main(string[] args)
         {
-            //List<Sweet> sweets = new List<Sweet>();
-
             Creator[] creators = new Creator[2];
             creators[0] = new CandyCreator();
             creators[1] = new ChocolateCreator();
