@@ -8,6 +8,7 @@ namespace Task1.Factory
 {
     public abstract class Creator
     {
-        public abstract Sweet FactoryMethod();
+        public abstract Sweet FactoryMethod(string candyName, int candyWeight, int candySugar, int candyCalories, TypeCandy type);
+        public abstract Sweet FactoryMethod(string candyName, int candyWeight, int candySugar, int candyCalories, ChocolateColor color);
     }
 }

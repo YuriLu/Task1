@@ -11,21 +11,30 @@ namespace Task1
     {
         static void Main(string[] args)
         {
+            //List<Sweet> sweets = new List<Sweet>();
+
             Creator[] creators = new Creator[2];
             creators[0] = new CandyCreator();
             creators[1] = new ChocolateCreator();
 
             IGift gift = new Gift();
 
-            foreach (var i in creators)
+            foreach (Creator i in creators)
             {
-                Sweet sweets = i.FactoryMethod();
-                gift.AddCandy(i.FactoryMethod());
+                if (i is CandyCreator)
+                {
+                    gift.AddCandy(i.FactoryMethod("ChupaChups", 25, 75, 70, TypeCandy.Lollipop));
+                }
+
+                if (i is ChocolateCreator)
+                {
+                    gift.AddCandy(i.FactoryMethod("Alpen Gold", 100, 115, 250, ChocolateColor.WhiteChocolate));
+                }
             }
 
+            gift.Sort();
             gift.ShowItems();
             gift.FindCandyBySugar(20, 100);
-            gift.Sort();
 
             Console.WriteLine();
             Console.WriteLine("Вес подарка: {0}", gift.GiftWeight());

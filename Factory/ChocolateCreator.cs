@@ -8,9 +8,13 @@ namespace Task1.Factory
 {
     public class ChocolateCreator : Creator
     {
-        public override Sweet FactoryMethod()
+        public override Sweet FactoryMethod(string chocoName, int chocoWeight, int chocoSugar, int chocoCalories, ChocolateColor chocoColor)
         {
-            return new Chocolate("Alpen Gold", 100, 115, 250, ChocolateColor.WhiteChocolate);
+            return new Chocolate(chocoName, chocoWeight, chocoSugar, chocoCalories, chocoColor);
+        }
+        public override Sweet FactoryMethod(string candyName, int candyWeight, int candySugar, int candyCalories, TypeCandy type)
+        {
+            throw new NotImplementedException();
         }
     }
 }
