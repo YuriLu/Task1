@@ -42,7 +42,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Candy.cs" />
+    <Compile Include="Factory\CandyCreator.cs" />
     <Compile Include="Chocolate.cs" />
+    <Compile Include="Factory\ChocolateCreator.cs" />
+    <Compile Include="Factory\Creator.cs" />
     <Compile Include="Gift.cs" />
     <Compile Include="IGift.cs" />
     <Compile Include="Sweet.cs" />

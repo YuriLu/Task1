@@ -22,6 +22,7 @@ namespace Task1
             this.Calories = sCalories;
         }
 
+        public abstract void TypeSweet();
 
 
     }

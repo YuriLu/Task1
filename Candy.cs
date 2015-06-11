@@ -19,10 +19,9 @@ namespace Task1
         {
             this.Type = type;
         }
-
-        //public override void StructureCandy()
-        //{
-        //    Console.WriteLine("Состав конфеты: {0}, {1}, {2}, {3}, {4}", Name, Weight, Sugar, Calories, color);
-        //}
+        public override void TypeSweet()
+        {
+            Console.WriteLine(Type.ToString());
+        }
     }
 }
