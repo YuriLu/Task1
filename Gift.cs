@@ -25,14 +25,14 @@ namespace Task1
             int giftWeight = 0;
             foreach (var i in gift)
             {
-                giftWeight += i.Weight;
+                giftWeight += i.weight;
             }
             return giftWeight;
         }
 
         public void Sort()
         {
-            gift = gift.OrderBy(x => x.Weight).ToList();
+            gift = gift.OrderBy(x => x.weight).ToList();
         }
 
         public void ShowItems()
@@ -40,7 +40,7 @@ namespace Task1
             Console.WriteLine("Набор конфет: ");
             foreach(var i in gift)
             {
-                Console.WriteLine(i.Name + " " + "Вес конфеты: " + i.Weight + " " + "Сахар:" + i.Sugar + " " + "Калории: " + i.Calories);
+                Console.WriteLine(i.name + " " + "Вес конфеты: " + i.weight + " " + "Сахар:" + i.sugar + " " + "Калории: " + i.calories);
             }
         }
 
@@ -51,10 +51,10 @@ namespace Task1
             Console.WriteLine("Избранная(-ые) конфета(-ы): ");
             foreach(var i in gift)
             {
-                if (i.Sugar >= min && i.Sugar <= max) 
+                if (i.sugar >= min && i.sugar <= max) 
                 {
                     resultSweet.Add(i);
-                    Console.WriteLine(i.Name + " " + "Вес конфеты: " + i.Weight + " " + "Сахар:" + i.Sugar + " " + "Калории: " + i.Calories);
+                    Console.WriteLine(i.name + " " + "Вес конфеты: " + i.weight + " " + "Сахар:" + i.sugar + " " + "Калории: " + i.calories);
                 }
                 
             }

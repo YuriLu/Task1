@@ -9,17 +9,17 @@ namespace Task1
 {
     public abstract class Sweet 
     {
-        public string Name { get; private set; }
-        public int Weight { get; private set; }
-        public int Sugar { get; private set; }
-        public int Calories { get; private set; }
+        public string name { get; private set; }
+        public int weight { get; private set; }
+        public int sugar { get; private set; }
+        public int calories { get; private set; }
 
-        public Sweet(string sName, int sWeight, int sSugar, int sCalories)
+        public Sweet(string sweetName, int sweetWeight, int sweetSugar, int sweetCalories)
         {
-            this.Name = sName;
-            this.Weight = sWeight;
-            this.Sugar = sSugar;
-            this.Calories = sCalories;
+            this.name = sweetName;
+            this.weight = sweetWeight;
+            this.sugar = sweetSugar;
+            this.calories = sweetCalories;
         }
 
         public abstract void TypeSweet();

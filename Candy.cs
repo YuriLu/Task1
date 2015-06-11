@@ -10,18 +10,17 @@ namespace Task1
 
     public class Candy : Sweet
     {
-        public string Color { get; private set; }
-        public TypeCandy Type; 
+        public TypeCandy type; 
         
 
         public Candy(string candyName, int candyWeight, int candySugar, int candyCalories, TypeCandy type)
             : base(candyName, candyWeight, candySugar, candyCalories)
         {
-            this.Type = type;
+            this.type = type;
         }
         public override void TypeSweet()
         {
-            Console.WriteLine(Type.ToString());
+            Console.WriteLine(type.ToString());
         }
     }
 }

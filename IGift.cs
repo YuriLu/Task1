@@ -8,7 +8,7 @@ namespace Task1
 {
     public interface IGift
     {
-        void AddCandy(Sweet sw);
+        void AddCandy(Sweet sweets);
         int GiftWeight();
         void Sort();
         void ShowItems();
