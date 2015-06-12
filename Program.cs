@@ -21,6 +21,7 @@ namespace Task1
             {
                 if (i is CandyCreator)
                 {
+                    gift.AddCandy(i.FactoryMethod("M&M", 80, 105, 125, TypeCandy.Lollipop));
                     gift.AddCandy(i.FactoryMethod("ChupaChups", 25, 75, 70, TypeCandy.Lollipop));
                 }
 
@@ -32,7 +33,7 @@ namespace Task1
 
             gift.Sort();
             gift.ShowItems();
-            gift.FindCandyBySugar(20, 100);
+            gift.FindCandyBySugar(20, 110);
 
             Console.WriteLine();
             Console.WriteLine("Вес подарка: {0}", gift.GiftWeight());
