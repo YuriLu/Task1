@@ -16,5 +16,6 @@ namespace Task1.Factory
         {
             throw new NotImplementedException();
         }
+        
     }
 }

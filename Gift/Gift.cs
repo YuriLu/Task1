@@ -8,58 +8,41 @@ namespace Task1
 {
     public class Gift : IGift
     {
-        private List<Sweet> gift;
+        private ICollection<Sweet> items;
 
         public Gift()
-        { 
-            gift = new List<Sweet>();
+        {
+            items = new List<Sweet>();
         }
 
-        public void AddCandy(Sweet sweets)
+        public void Add(Sweet sweets)
         {
-            gift.Add(sweets);
+            items.Add(sweets);
         }
 
         public int GiftWeight()
         {
-            int giftWeight = 0;
-            foreach (var i in gift)
-            {
-                giftWeight += i.weight;
-            }
-            return giftWeight;
+            return items.Sum(x=>x.weight);
         }
 
         public void Sort()
         {
-            gift = gift.OrderBy(x => x.weight).ToList();
-        }
-
-        public void ShowItems()
-        {
-            Console.WriteLine("Набор конфет: ");
-            foreach(var i in gift)
+            var temp = items.OrderBy(x => x.weight).ToList();
+            items.Clear();
+            foreach (var item in temp)
             {
-                Console.WriteLine(i.name + " " + "Вес конфеты: " + i.weight + " " + "Сахар:" + i.sugar + " " + "Калории: " + i.calories);
+                items.Add(item);
             }
         }
 
-        public void FindCandyBySugar(int min, int max)
+        public IEnumerable<Sweet> FindCandyBySugar(int min, int max)
         {
-            List<Sweet> resultSweet = new List<Sweet>();
-            Console.WriteLine();
-            Console.WriteLine("Избранная(-ые) конфета(-ы): ");
-            foreach(var i in gift)
-            {
-                if (i.sugar >= min && i.sugar <= max) 
-                {
-                    resultSweet.Add(i);
-                    Console.WriteLine(i.name + " " + "Вес конфеты: " + i.weight + " " + "Сахар:" + i.sugar + " " + "Калории: " + i.calories);
-                }
-                
-            }
-            
+            return items.Where(x => (x.sugar >= min) && (x.sugar <= max)).ToList();
+        }
 
+        public IEnumerable<Sweet> Items
+        {
+            get { return this.items; }
         }
     }
 }

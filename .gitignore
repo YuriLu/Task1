@@ -56,3 +56,8 @@ obj/Debug/Task1.pdb
 obj/Debug/Task1.exe
 bin/Debug/Task1.exe
 bin/Debug/Task1.pdb
+*.exe
+bin/Debug/Task1_1.exe.config
+*.pdb
+bin/Debug/Task1_1.vshost.exe.config
+*.manifest

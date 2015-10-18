@@ -23,7 +23,5 @@ namespace Task1
         }
 
         public abstract void TypeSweet();
-
-
     }
 }

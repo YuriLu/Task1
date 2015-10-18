@@ -8,10 +8,12 @@ namespace Task1
 {
     public interface IGift
     {
-        void AddCandy(Sweet sweets);
+        IEnumerable<Sweet> Items{get;}
+        void Add(Sweet sweets);
         int GiftWeight();
         void Sort();
-        void ShowItems();
-        void FindCandyBySugar(int min, int max);
+        //void ShowItems();
+        IEnumerable<Sweet> FindCandyBySugar(int min, int max);
+        //void FindCandyBySugar(int min, int max);
     }
 }

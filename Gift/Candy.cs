@@ -11,7 +11,6 @@ namespace Task1
     public class Candy : Sweet
     {
         public TypeCandy type; 
-        
 
         public Candy(string candyName, int candyWeight, int candySugar, int candyCalories, TypeCandy type)
             : base(candyName, candyWeight, candySugar, candyCalories)
